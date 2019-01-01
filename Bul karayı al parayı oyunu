@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std ;
+
+
+enum Renk{Beyaz,Siyah,Kirmizi,Turuncu,Mavi
+};
+
+struct nesne{
+	 
+	Renk renk ; 
+	string x ; 	
+};
+
+
+int main()
+{
+	int deger ; 
+	nesne n1 = {Beyaz,"Araba"},n2={Siyah,"Araba"}, n3={Kirmizi,"Araba"},n4 ={Turuncu,"Araba"},n5={Mavi,"Araba"};
+	
+	nesne yedek , secilen , odul ; 
+	
+	odul = n4 ; 
+	
+	yedek = n2 ; 
+	n2 = n1 ; 
+	n1 = yedek ; 
+	
+	yedek = n4 ; 
+	n4 = n2 ;
+	n2 = yedek ; 
+	
+	yedek = n2 ; 
+	n2 = n5 ; 
+	n5 = yedek ; 
+	
+	yedek = n1 ; 
+	n1 = n2 ; 
+	n2 = yedek ; 
+	
+	yedek = n1 ; 
+	n1 = n4 ; 
+	n4 = yedek ; 
+	
+	
+	cout << "************************************BUL KARAYI AL PARAYI OYUNUNA HOSGELDINIZ !!.....************************************" << endl << endl ;
+	cout << "1 ile 5 arasinda bir deger girin : " ; cin >> deger ;
+	while(deger<1||deger>5)
+	{
+		cout << "Lutfen belirtilen aralikta bir deger girin : " ; cin >> deger ; 
+	}
+	
+	switch(deger)
+	{
+		case 1 : secilen = n1 ; break ; 
+		case 2 : secilen = n2 ; break ;
+		case 3 : secilen = n3 ; break ; 
+		case 4 : secilen = n4 ; break ; 
+		case 5 : secilen = n5 ; break ; 		
+	}
+	if(secilen.renk==odul.renk&&secilen.x==odul.x) cout << "KAZANDINIZ !" << endl ; 
+	else cout << "KAYBETTINIZ ! .." << endl ; 
+}
