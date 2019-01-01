@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std ;
+
+
+struct olcum{
+	int m;
+	float cm;
+};
+
+struct oda{
+	olcum boy ; 
+	olcum en ; 
+}oda1,oda2,sonuc;
+
+
+
+int main()
+{
+	cout << "1. odanin boyunun tam sayi olan kismini girin : " ; cin >> oda1.boy.m;
+	cout << "1. odanin boyunun ondalik olan kismini girin : " ; cin >> oda1.boy.cm ; 
+	cout << "1. odanin eninin tam sayi olan kismini girin : " ; cin >> oda1.en.m ; 
+	cout << "1. odanin eninin ondalik olan kismini girin : " ; cin >> oda1.en.cm ; 
+	
+	cout << "2. odanin boyunun tam sayi olan kismini girin : " ; cin >> oda1.boy.m;
+	cout << "2. odanin boyunun ondalik olan kismini girin : " ; cin >> oda1.boy.cm ; 
+	cout << "2. odanin eninin tam sayi olan kismini girin : " ; cin >> oda1.en.m ; 
+	cout << "2. odanin eninin ondalik olan kismini girin : " ; cin >> oda1.en.cm ; 
+	
+	sonuc.boy.m = oda1.boy.m + oda2.boy.m ; 
+	sonuc.boy.cm = oda1.boy.cm + oda2.boy.cm;
+	sonuc.en.m = oda1.en.m + oda2.en.m ; 
+	sonuc.en.cm = oda1.en.cm + oda2.en.cm;
+	
+	if(sonuc.boy.cm>=1.00)
+	{
+		sonuc.boy.m++;
+		sonuc.boy.cm--;
+	}
+	if(sonuc.en.cm>=1.00)
+	{
+		sonuc.en.cm--;
+		sonuc.en.m++;
+	}
+	cout << sonuc.boy.m << " " << sonuc.boy.cm << endl ; 
+	cout << sonuc.en.m << " " << sonuc.en.cm << endl ; 
+}
