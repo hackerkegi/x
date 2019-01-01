@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+
+
+struct City{
+	string cityname;
+	string village;
+};
+
+struct School{
+	
+	string scname;
+	int schoolage;
+	City city;
+};
+
+
+struct Human{
+	string name,eyescolor,haircolor,besthoby,department;
+	int age,weight;
+	float height;
+	School school;
+};
+
+void fonksiyon(Human human){
+	
+	cout << "Name : " << human.name << endl ; 
+	cout << "Eyescolor : " << human.eyescolor << endl ; 
+	cout << "Haircolor : " << human.haircolor << endl ; 
+	cout << "Besthoby : " << human.besthoby << endl ; 
+	cout << "Age : " << human.age << endl ;
+	cout << "Weight : " << human.weight << endl ; 
+	cout << "Height : " << human.height << endl ; 
+	cout << "Department : " << human.department << endl ; 
+	cout << "School Name : " << human.school.scname << endl ; 
+	cout << "School Age : " << human.school.schoolage << endl;
+	cout << "City Name : " << human.school.city.cityname << endl;
+	cout << "Village  : " << human.school.city.village << endl;
+	cout << endl << endl << endl ; 
+}
+
+
+int main(){
+	
+	Human Ahmet = {"Ahmet","Black","Black","Draw pic","BTBS",19,74,1.86,{"Erdemli UTIYO",15,{"Mersin","Erdemli"}}};
+	Human Muhammed = {"Muhammed","Black","Black","Playing witcher","btbs",18,82,1.78,{"Erdemli UTIYO",15,{"Istanbul","Bagcilar"}}};
+	Human Mustafa = {"Mustafa","Black","Black","Reading Book","BTBS",19,80,1.64,{"Erdemli UTIYO",15,{"Manisa","Akhisar"}}};
+	Human Hakki = {"Hakki","Black","Black","Playing Computer Games","BTBS",18,75,1.85,{"Erdemli UTIYO",15,{"Mugla","Kavaklidere"}}};
+	Human Kadir = {"Kadir","Siyah","Siyah","Islak mendil calmak","IBY",20,70,1.68,{"Erdemli UTIYO",15,{"Sanliurfa","Yenisehir"}}};
+	Human MustafaHack = {"MustafaHack","Green-Blue","Siyah","Bilgisayarda Takilmak","IBY",19,68,1.74,{"Erdemli UTIYO",15,{"Bolu","Goyluk"}}};
+	fonksiyon(Ahmet);
+	cout << "*********************************************************************************************************************" << endl ; 
+	cout << endl << endl ; 
+	fonksiyon(Muhammed);
+	cout << "*********************************************************************************************************************" << endl ; 
+	cout << endl << endl ;
+	fonksiyon(Mustafa);
+	cout << "*********************************************************************************************************************" << endl ; 
+	cout << endl << endl ;
+	fonksiyon(Hakki);
+	cout << "*********************************************************************************************************************" << endl ; 
+	fonksiyon(Kadir);
+	cout << "*********************************************************************************************************************" << endl ; 
+	fonksiyon(MustafaHack);
+}
