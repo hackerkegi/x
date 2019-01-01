@@ -1,0 +1,27 @@
+//10 elemanlı bir dizi içinde karışık şekilde sayılar bulunmaktadır. 
+//Örnekte bu dizi içindeki sayıları küçükten büyüğe sıralayarak ekranda yazdıracağız.
+#include <iostream>
+using namespace std;
+int main()
+{
+	int yedek;
+	int dizi[] = {17,21,13,95,105,69,74,25,68,49};
+	for(int i = 0 ; i < 10-1 ;i++)
+	{
+		for(int j = 0 ; j<10-1;j++)
+		{
+			if(dizi[j] > dizi[j+1])
+			{
+				yedek = dizi[j];
+				dizi[j] = dizi[j+1];
+				dizi[j+1] = yedek;
+			}
+		}
+	}
+	
+	for(int i=0;i<10;i++)
+	{
+		cout << dizi[i] << " ";
+	}
+	
+}
