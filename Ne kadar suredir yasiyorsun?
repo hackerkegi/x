@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std ;
+
+
+
+int main()
+{
+	int dyil,day,dgun,yil,gun,ay,yil1,ay1,gun1;
+	
+	cout << "Dogdugunuz yili girin : " ; cin >> dyil;
+	cout << "Dogdugunuz ayi girin : "; cin >> day;
+	cout << "Dogdugunuz gunu girin : "; cin >> dgun ; 
+	
+	cout << "Su anki yili girin : " ; cin >> yil;
+	cout << "Su anki ayi girin : " ; cin >> ay ; 
+	cout << "Su anki gunu girin : " ; cin >> gun ; 
+	
+	yil1 = yil-dyil;
+	ay1  = ay - day ;
+	if(day>ay)
+	{
+		yil1--;
+		ay1 = ay ; 
+	}
+	gun1 = gun - dgun ; 
+	if(dgun>gun)
+	{
+		ay1--;
+		gun1 = gun ; 
+	}
+	
+	cout <<yil1 << " Yil " << ay1 << "Ay " << gun1 << " Gundur yasiyorsunuz."<<endl ; 
+	
+}
