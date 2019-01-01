@@ -1,0 +1,25 @@
+//C++ ile kullanıcının belirlediği boyutta bir dizi oluşturarak 
+//oluşturulan bu dizi içine 1-100 arası rastgele sayılar atan ve bu sayıları ekranda gösteren örneği yapacağız.
+#include <iostream>
+#include<stdlib.h>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL,"Turkish"); //Türkçe karakter
+	int n;
+	int toplam=0;
+	cout<< "Eleman sayisini girin : ";
+	cin>>n;
+	int sayilar[n];
+	for (int i=0;i<n;i++)
+	{
+		sayilar[i]=rand() %99+1;
+		toplam+=sayilar[i];
+	}
+	for(int i=0;i<n;i++)
+	{
+		cout<<sayilar[i]<<"\t";
+	}
+	
+		cout<<endl<<"Sayilarin Toplami = "<<toplam;
+}
