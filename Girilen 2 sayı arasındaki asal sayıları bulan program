@@ -1,0 +1,43 @@
+
+//Bu örnekte C++ ile kullanıcının girdiği 2 sayı arasındaki asal sayıları listeleyeceğiz. 
+//Örneğimizde iç içe For Döngüsü kullanarak kullanıcının girdiği aralıktaki tüm sayıları tek tek kontrol edeceğiz.
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL,"Turkish");
+	int sayi1,sayi2,sayac;
+	cout << "1.Sayı : ";
+	cin>>sayi1;
+	
+	if(sayi1==1) sayi1++;
+	cout << "2.Sayı : " ; cin>>sayi2;
+	
+	
+	
+	for(int i = sayi1 ; i<=sayi2 ; i++)
+	{
+		sayac = 0 ;
+		for(int j = 2 ;j<i ; j++)
+		{
+			if(i%j==0)
+			{
+				sayac++;
+				break;
+			}
+		}
+		
+		if(sayac==0)
+		{
+			cout << i << " ";
+		}
+	}
+
+	
+	
+	
+}
